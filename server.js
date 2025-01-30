@@ -9,7 +9,8 @@ app.use(cors());
 
 
 //Mongo db connectivity
-const mongourl="mongodb://localhost/fruitvegmarke"
+// const mongourl="mongodb://localhost:27017/fruitvegmarke"
+const mongourl="mongodb+srv://swathin2023it:swathi0109@cluster0.xldd0.mongodb.net/fruitvegmarke"
 mongoose.connect(mongourl)
 .then(()=>{
 	console.log("Database Connected")
@@ -20,6 +21,7 @@ mongoose.connect(mongourl)
 		});
 
 
+    
 })
 
 
