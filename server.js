@@ -5,12 +5,22 @@ const app = express();
 const PORT=5000;
 const cors = require('cors');
 app.use(express.json());
-app.use(cors()); 
+// app.use(cors()); 
+// const PORT = process.env.PORT || 5000;
+// require("dotenv").config();
 
+
+app.use(cors({ origin: "https://fruitshopfrontend.vercel.app/" }));
+// app.use(cors({
+//   origin: ["http://localhost:5000", "https://fruitshopfrontend.vercel.app"], 
+//   methods: ["GET", "POST", "PUT", "DELETE"],
+//   credentials: true
+// }));
 
 //Mongo db connectivity
 //const mongourl="mongodb://localhost:27017/fruitvegmarke"
 const mongourl="mongodb+srv://swathin2023it:swathi0109@cluster0.xldd0.mongodb.net/fruitvegmarke"
+// const mongourl=process.env.MONGO_URI;
 mongoose.connect(mongourl)
 .then(()=>{
 	console.log("Database Connected")
