@@ -18,8 +18,8 @@ app.use(cors({ origin: "https://fruitshopfrontend.vercel.app/" }));
 // }));
 
 //Mongo db connectivity
-const mongourl="mongodb://localhost:27017/fruitvegmarke"
-// const mongourl="mongodb+srv://swathin2023it:swathi0109@cluster0.xldd0.mongodb.net/fruitvegmarke"
+// const mongourl="mongodb://localhost:27017/fruitvegmarke"
+const mongourl="mongodb+srv://swathin2023it:swathi0109@cluster0.xldd0.mongodb.net/fruitvegmarke"
 // const mongourl=process.env.MONGO_URI;
 mongoose.connect(mongourl)
 .then(()=>{
