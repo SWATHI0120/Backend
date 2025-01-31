@@ -9,14 +9,14 @@ app.use(cors());
 
 
 //Mongo db connectivity
-// const mongourl="mongodb://localhost:27017/fruitvegmarke"
+//const mongourl="mongodb://localhost:27017/fruitvegmarke"
 const mongourl="mongodb+srv://swathin2023it:swathi0109@cluster0.xldd0.mongodb.net/fruitvegmarke"
 mongoose.connect(mongourl)
 .then(()=>{
 	console.log("Database Connected")
 	app.listen(PORT,()=>{
 		console.log(
-			`Server is running on port ${PORT}`
+			`My server is running at http://localhost:${PORT}`
 		);
 		});
 
